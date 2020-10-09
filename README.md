@@ -100,6 +100,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 # my-portfolio
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f9cdd58e-da8b-4191-9df0-63ede72b3a53/deploy-status)](https://app.netlify.com/sites/laughing-edison-0edc10/deploys)
+
 ### Seee more
 
 - Gatsby + TailwindCSS: https://www.gatsbyjs.com/docs/tailwind-css/
