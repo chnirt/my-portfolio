@@ -4,6 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "../css/index.css"
+import FeatureSection from "./feature-section"
+import TestimonialsSection from "./testimonials-section"
+import CallActionSection from "./call-action-section"
 
 const IndexPage = () => {
   const [count, setCount] = useState(0)
@@ -21,6 +24,9 @@ const IndexPage = () => {
       >
         +
       </button>
+      <FeatureSection />
+      <TestimonialsSection />
+      <CallActionSection />
     </Layout>
   )
 }

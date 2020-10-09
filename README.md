@@ -103,3 +103,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ### Seee more
 
 - Gatsby + TailwindCSS: https://www.gatsbyjs.com/docs/tailwind-css/
+
+- How To Build a Styled Landing Page with Tailwind CSS : https://www.digitalocean.com/community/tutorials/build-a-beautiful-landing-page-with-tailwind-css
+
+- SVG free: https://undraw.co/illustrations
