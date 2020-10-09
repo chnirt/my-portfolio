@@ -5,30 +5,74 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
 
+import Logo from "./logo"
+
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
+  const [toggleMenu, setToggleMenu] = useState(false)
+
+  const handleToggle = () => setToggleMenu(prevState => !prevState)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/hello/">Hello</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+      <div class="container mx-auto bg-purple-300 p-5">
+        <nav class="flex justify-between">
+          <div>
+            <a href="#">
+              <Logo />
+            </a>
+
+            <p
+              id="hamburgerbtn"
+              class="md:hidden bg-purple-800"
+              onClick={handleToggle}
+            >
+              menu
+            </p>
+          </div>
+          <ul
+            class="hidden md:flex md:flex-row"
+            id="mobileMenu"
+            style={{ display: toggleMenu && "block" }}
+          >
+            <li class="pr-5">
+              <a>
+                <Link to="/services/">Services</Link>
+              </a>
+            </li>
+            <li class="pr-5">
+              <a>
+                <Link to="/porfolio/">Porfolio</Link>
+              </a>
+            </li>
+            <li class="pr-5">
+              <a>
+                <Link to="/about/">About</Link>
+              </a>
+            </li>
+            <li>
+              <a>
+                <Link to="/contact/">Contact</Link>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <div
         style={{
           margin: `0 auto`,
