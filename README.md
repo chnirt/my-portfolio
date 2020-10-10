@@ -111,3 +111,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - How To Build a Styled Landing Page with Tailwind CSS : https://www.digitalocean.com/community/tutorials/build-a-beautiful-landing-page-with-tailwind-css
 
 - SVG free: https://undraw.co/illustrations
+
+- TailwindUI free: https://mertjf.github.io/tailblocks/
+
+- Landing page: https://www.google.com/url?sa=i&url=https%3A%2F%2Falleyraccoon.com%2Fhow-to-build-an-interior-design-landing-page-that-converts%2F&psig=AOvVaw2zZjob7cGb61-bTfZ6J4r0&ust=1602405412945000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIigrMLPqewCFQAAAAAdAAAAABAP
