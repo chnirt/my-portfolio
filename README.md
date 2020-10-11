@@ -113,6 +113,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - [] Scroll animation
 - [] Host to server
 - [] Deploy to group github
+- [x] Add leaflet v2
 
 ### Seee more
 
@@ -125,3 +126,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - TailwindUI free: https://mertjf.github.io/tailblocks/
 
 - Landing page: https://www.google.com/url?sa=i&url=https%3A%2F%2Falleyraccoon.com%2Fhow-to-build-an-interior-design-landing-page-that-converts%2F&psig=AOvVaw2zZjob7cGb61-bTfZ6J4r0&ust=1602405412945000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIigrMLPqewCFQAAAAAdAAAAABAP
+
+- Marker not appearing for simple example: https://github.com/PaulLeCam/react-leaflet/issues/453

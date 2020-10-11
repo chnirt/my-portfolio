@@ -102,7 +102,7 @@ export default function Navbar() {
           <div class="flex flex-row items-center justify-between">
             <Link
               to="/"
-              class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+              class="flex title-font font-medium items-center text-gray-900"
             >
               <Logo />
             </Link>

@@ -1,11 +1,41 @@
-import React from "react"
+import React, { useLayoutEffect, useState } from "react"
+import { Map, Marker, Popup, TileLayer } from "react-leaflet"
+import { Icon } from "leaflet"
+import "leaflet/dist/leaflet.css"
+import "../css/leaflet.css"
+
+delete Icon.Default.prototype._getIconUrl
+
+Icon.Default.mergeOptions({
+  iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
+  iconUrl: require("leaflet/dist/images/marker-icon.png"),
+  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
+})
+
+// const logo = new Icon({
+//   iconUrl: require("../images/Logo2.svg"),
+//   iconSize: [50, 50],
+// })
 
 export default function ContactSection() {
+  const [latitude, setLatitude] = useState("10.7776331")
+  const [longitude, setLongitude] = useState("106.7116815")
+  const position = [latitude, longitude]
+
+  useLayoutEffect(() => {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      // console.log("Latitude is :", position.coords.latitude);
+      // console.log("Longitude is :", position.coords.longitude);
+      setLatitude(position.coords.latitude)
+      setLongitude(position.coords.longitude)
+    })
+  }, [])
+
   return (
     <>
       <section class="text-gray-700 body-font relative">
         <div class="absolute inset-0 bg-gray-300">
-          <iframe
+          {/* <iframe
             width="100%"
             height="100%"
             frameborder="0"
@@ -15,11 +45,27 @@ export default function ContactSection() {
             scrolling="no"
             src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
             // style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
-          ></iframe>
+          ></iframe> */}
+          <Map center={position} zoom={15}>
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Marker
+              position={position}
+              // icon={logo}
+            >
+              <Popup>
+                Welcome to
+                <br />
+                my geolocation.
+              </Popup>
+            </Marker>
+          </Map>
         </div>
         <div class="container px-5 py-24 mx-auto flex">
           <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
-            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
+            {/* <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
               Feedback
             </h2>
             <p class="leading-relaxed mb-5 text-gray-600">
@@ -40,7 +86,7 @@ export default function ContactSection() {
             <p class="text-xs text-gray-500 mt-3">
               Chicharrones blog helvetica normcore iceland tousled brook viral
               artisan.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
