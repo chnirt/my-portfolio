@@ -102,9 +102,19 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f9cdd58e-da8b-4191-9df0-63ede72b3a53/deploy-status)](https://app.netlify.com/sites/laughing-edison-0edc10/deploys)
 
-### Seee more
-
 ### [Demo](https://laughing-edison-0edc10.netlify.app/)
+
+### Todo
+
+- [x] Config tailwindCSS
+- [] Burger navbar
+- [] Integrate strapi
+- [] Animation svg
+- [] Scroll animation
+- [] Host to server
+- [] Deploy to group github
+
+### Seee more
 
 - Gatsby + TailwindCSS: https://www.gatsbyjs.com/docs/tailwind-css/
 
