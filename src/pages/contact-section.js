@@ -23,12 +23,12 @@ export default function ContactSection() {
   const position = [latitude, longitude]
 
   useLayoutEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      // console.log("Latitude is :", position.coords.latitude);
-      // console.log("Longitude is :", position.coords.longitude);
-      setLatitude(position.coords.latitude)
-      setLongitude(position.coords.longitude)
-    })
+    // navigator.geolocation.getCurrentPosition(function (position) {
+    //   // console.log("Latitude is :", position.coords.latitude);
+    //   // console.log("Longitude is :", position.coords.longitude);
+    //   setLatitude(position.coords.latitude)
+    //   setLongitude(position.coords.longitude)
+    // })
   }, [])
 
   return (
