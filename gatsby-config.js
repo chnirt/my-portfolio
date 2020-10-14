@@ -38,5 +38,11 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-react-leaflet`,
+      options: {
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
   ],
 }

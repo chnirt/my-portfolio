@@ -18,8 +18,8 @@ Icon.Default.mergeOptions({
 // })
 
 export default function ContactSection() {
-  const [latitude, setLatitude] = useState("10.7776331")
-  const [longitude, setLongitude] = useState("106.7116815")
+  const [latitude, setLatitude] = useState("10.772362")
+  const [longitude, setLongitude] = useState("106.726224")
   const position = [latitude, longitude]
 
   useLayoutEffect(() => {
@@ -30,6 +30,29 @@ export default function ContactSection() {
     //   setLongitude(position.coords.longitude)
     // })
   }, [])
+
+  const MyMap = () => {
+    if (typeof window !== "undefined") {
+      return (
+        <Map center={position} zoom={15}>
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <Marker
+            position={position}
+            // icon={logo}
+          >
+            <Popup>
+              Welcome to <br />
+              my geolocation.
+            </Popup>
+          </Marker>
+        </Map>
+      )
+    }
+    return null
+  }
 
   return (
     <>
@@ -46,22 +69,7 @@ export default function ContactSection() {
             src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
             // style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
           ></iframe> */}
-          <Map center={position} zoom={15}>
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            />
-            <Marker
-              position={position}
-              // icon={logo}
-            >
-              <Popup>
-                Welcome to
-                <br />
-                my geolocation.
-              </Popup>
-            </Marker>
-          </Map>
+          <MyMap />
         </div>
         <div class="container px-5 py-24 mx-auto flex">
           <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
