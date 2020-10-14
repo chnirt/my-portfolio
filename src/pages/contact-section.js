@@ -4,18 +4,17 @@ import { Icon } from "leaflet"
 import "leaflet/dist/leaflet.css"
 import "../css/leaflet.css"
 
-delete Icon.Default.prototype._getIconUrl
+// delete Icon.Default.prototype._getIconUrl
 
-Icon.Default.mergeOptions({
-  iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
-  iconUrl: require("leaflet/dist/images/marker-icon.png"),
-  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
-})
-
-// const logo = new Icon({
-//   iconUrl: require("../images/Logo2.svg"),
-//   iconSize: [50, 50],
+// Icon.Default.mergeOptions({
+//   iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
+//   iconUrl: require("leaflet/dist/images/marker-icon.png"),
+//   shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
 // })
+
+const logo = new Icon({
+  iconUrl: require("leaflet/dist/images/marker-icon.png"),
+})
 
 export default function ContactSection() {
   const [latitude, setLatitude] = useState("10.772362")
@@ -39,10 +38,7 @@ export default function ContactSection() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          <Marker
-            position={position}
-            // icon={logo}
-          >
+          <Marker position={position} icon={logo}>
             <Popup>
               Welcome to <br />
               my geolocation.
