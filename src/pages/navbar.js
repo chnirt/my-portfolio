@@ -98,19 +98,11 @@ export default function Navbar() {
   return (
     <>
       <header
-        style={{
-          position: "fixed",
-          top: 0,
-          width: "100%",
-          display: "block",
-          transition: "top 0.5s",
-          background: "#FFF",
-        }}
         id="navbar"
-        class="text-gray-700 body-font shadow"
+        class="bg-white w-full text-gray-700 body-font shadow z-10 block fixed top-0 transition-top duration-500"
       >
-        <div class="container mx-auto flex flex-wrap p-5 flex-col items-center md:flex-row ">
-          <div class="flex flex-row items-center justify-between">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row ">
+          <div class="flex flex-row justify-between items-center">
             <Link to="/" class="flex title-font font-medium text-gray-900">
               <Logo />
             </Link>
@@ -119,7 +111,7 @@ export default function Navbar() {
           <nav
             class={`${
               isOpen ? "block" : "hidden"
-            } flex flex-col md:block md:flex-wrap md:flex-row md:ml-auto md:items-center md:text-base`}
+            } flex flex-col md:block md:flex md:flex-wrap md:flex-row md:ml-auto md:items-center md:text-base`}
           >
             <a class="ml-5 cursor-pointer transition ease-out duration-500 transform hover:scale-125 border-b-2 border-transparent hover:border-indigo-400">
               Products

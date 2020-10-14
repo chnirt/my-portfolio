@@ -196,7 +196,7 @@ export default function TeamSection() {
                 />
                 <div class="w-full">
                   <h2 class="title-font font-medium text-lg text-gray-900">
-                    Charles
+                    lethanhson2910
                   </h2>
                   <h3 class="text-gray-500 mb-3">Backend Developer</h3>
                   <p class="mb-4">

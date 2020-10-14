@@ -107,12 +107,12 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ### Todo
 
 - [x] Config tailwindCSS
-- [] Burger navbar
-- [] Integrate strapi
-- [] Animation svg
-- [] Scroll animation
-- [] Host to server
-- [] Deploy to group github
+- [x] Burger navbar
+- [ ] Integrate Strapi
+- [ ] Animation svg
+- [x] Scroll animation
+- [x] Host to server
+- [ ] Deploy to group github
 - [x] Add leaflet v2
 
 ### Seee more
