@@ -97,13 +97,21 @@ export default function Navbar() {
 
   return (
     <>
-      <header class="text-gray-700 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center">
+      <header
+        style={{
+          position: "fixed",
+          top: 0,
+          width: "100%",
+          display: "block",
+          transition: "top 0.5s",
+          background: "#FFF",
+        }}
+        id="navbar"
+        class="text-gray-700 body-font shadow"
+      >
+        <div class="container mx-auto flex flex-wrap p-5 flex-col items-center md:flex-row ">
           <div class="flex flex-row items-center justify-between">
-            <Link
-              to="/"
-              class="flex title-font font-medium items-center text-gray-900"
-            >
+            <Link to="/" class="flex title-font font-medium text-gray-900">
               <Logo />
             </Link>
             {isOpen ? <Close /> : <Menu />}
@@ -126,12 +134,6 @@ export default function Navbar() {
               Contact Us
             </a>
           </nav>
-          {/* <button
-            style={{ backgroundColor: "#2492B5" }}
-            class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-white mt-4 md:mt-0"
-          >
-            Login
-          </button> */}
         </div>
       </header>
     </>
