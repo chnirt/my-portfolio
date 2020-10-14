@@ -12,7 +12,7 @@ import Footer from "./footer"
 import TeamSection from "./team-section"
 
 const IndexPage = () => {
-  const [prevScrollPOS, setPrevScrollPOS] = useState(window.pageYOffset)
+  const [prevScrollPOS, setPrevScrollPOS] = useState(null)
 
   const handleScroll = () => {
     var currentScrollPOS = window.pageYOffset
@@ -23,10 +23,19 @@ const IndexPage = () => {
     }
     setPrevScrollPOS(currentScrollPOS)
   }
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      handleScroll(prevScrollPOS)
-    })
+    if (typeof window !== "undefined") {
+      setPrevScrollPOS(window.pageYOffset)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        handleScroll(prevScrollPOS)
+      })
+    }
   })
 
   return (
