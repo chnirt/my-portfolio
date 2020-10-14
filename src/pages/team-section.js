@@ -20,14 +20,14 @@ export default function TeamSection() {
               <div class="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
-                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4 transform hover:scale-125 duration-500"
                   src="https://i.pinimg.com/564x/91/04/0d/91040ddab67dac50ff3f5bd997d77d8c.jpg"
                 />
                 <div class="w-full">
                   <h2 class="title-font font-medium text-lg text-gray-900">
                     Chnirt
                   </h2>
-                  <h3 class="text-gray-500 mb-3">Fullstack Developer</h3>
+                  <h3 class="text-gray-500 mb-3">FullStack Developer</h3>
                   <p class="mb-4">
                     DIY tote bag drinking vinegar cronut adaptogen squid fanny
                     pack vaporware.
@@ -77,7 +77,7 @@ export default function TeamSection() {
               <div class="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
-                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4 transform hover:scale-125 duration-500"
                   src="https://i.pinimg.com/564x/fb/58/36/fb5836045f278a6161f72d7b4348b5ad.jpg"
                 />
                 <div class="w-full">
@@ -134,7 +134,7 @@ export default function TeamSection() {
               <div class="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
-                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4 transform hover:scale-125 duration-500"
                   src="https://i.pinimg.com/564x/7a/00/5d/7a005d38e85b5b794befa2d0e979b149.jpg"
                 />
                 <div class="w-full">
@@ -191,7 +191,7 @@ export default function TeamSection() {
               <div class="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
-                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                  class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4 transform hover:scale-125 duration-500"
                   src="https://i.pinimg.com/originals/fd/a4/30/fda43097cfb1afcacb58aba96ab3462a.jpg"
                 />
                 <div class="w-full">
